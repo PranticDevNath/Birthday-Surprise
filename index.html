@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="confetti"></div>
+    <div class="container">
+        <div class="name-box">
+            <h1 class="greeting neon-text">Happy Birthday, DEV!</h1>
+            <div class="sticker">Surprise!</div>
+        </div>
+        <div id="countdown">
+            <div class="timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+        <button class="reveal-button" onclick="revealGift()">Reveal Your Surprise</button>
+        <div id="gift" class="hidden">
+            <h2>Your Special Message!</h2>
+            <p>“🎂 Happy Birthday! 🎉 May your day be filled with joy, laughter, and wonderful memories. May this year
+                bring you success, love, and all the happiness your heart desires. Cheers to another amazing trip around
+                the sun! 🥳🎈”
+                Feel free to personalize it further or let me know if you wouldd like something different! 😊</p>
+            <p><a href="gift.html">Click here for your gift</a></p>
+        </div>
+        <div class="gallery">
+            <h2>Memorable Moments</h2>
+            <div class="photo-grid">
+                <img src="photo1.png" alt="Memory 1">
+                <img src="photo2.png" alt="Memory 2">
+                <img src="photo3.png" alt="Memory 3">
+                <img src="photo4.png" alt="Memory 4">
+                <img src="photo5.png" alt="Memory 5">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

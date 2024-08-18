@@ -1,0 +1,212 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('photo1.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.name-box {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.greeting {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff4081, 0 0 20px #ff4081, 0 0 25px #ff4081, 0 0 30px #ff4081, 0 0 35px #ff4081;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff4081, 0 0 20px #ff4081, 0 0 25px #ff4081, 0 0 30px #ff4081, 0 0 35px #ff4081;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081, 0 0 80px #ff4081;
+    }
+}
+
+.sticker {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4081;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
+    transform: rotate(-15deg);
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-15deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-15deg);
+    }
+}
+
+#countdown {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.reveal-button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    margin: 20px 0;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+
+.reveal-button:hover {
+    box-shadow: 0 0 25px rgba(255, 64, 129, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+#gift {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.gallery {
+    margin-top: 30px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti::before, .confetti::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff4081;
+    animation: confettiFall 5s infinite;
+}
+
+.confetti::after {
+    background: #ffd700;
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100%) rotate(0); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .greeting {
+        font-size: 1.8em;
+    }
+
+    .reveal-button {
+        font-size: 1em;
+    }
+
+    .gallery {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.time-box p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+
