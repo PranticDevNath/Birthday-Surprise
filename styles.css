@@ -65,6 +65,12 @@ body, html {
     animation: bounce 1s ease infinite;
 }
 
+
+button { 
+background-color: aqua;
+}
+
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0) rotate(-15deg);
